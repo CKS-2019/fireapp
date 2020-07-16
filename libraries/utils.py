@@ -308,7 +308,7 @@ class DataManager:
                         time.sleep(0.01)
                         my_bar.progress(percent_complete + 1)
                     image_placeholder = st.empty()
-                    while cv.waitKey(1) < 0:
+                    while(True) :
                         try:
                             hasframe, image = cap.read()
                             image=cv.resize(image, (608, 608)) 
